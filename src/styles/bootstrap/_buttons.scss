@@ -1,10 +1,10 @@
 .btn {
-  background: rgba(255, 255, 255, 0.1);
+  background: $mis-white;
   letter-spacing: 0.1em;
   border: 0;
   text-transform: uppercase;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: $mis-white-hover;
 }

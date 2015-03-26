@@ -8,11 +8,11 @@
  * Controller of the inthesacApp
  */
 angular.module('inthesacApp')
-  .controller('FarmCtrl', function ($scope) {
+  .controller('AboutCtrl', function ($scope) {
 
-    $scope.title = 'Farm To Fork';
+    $scope.title = 'Art';
 
-    $scope.action = 'https://formkeep.com/f/e737368d40bd';
+    $scope.action = 'https://formkeep.com/f/66fc8d855494';
 
     $scope.options = [
       {

@@ -1,14 +1,7 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name inthesacApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the inthesacApp
- */
 angular.module('inthesacApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('ArtCtrl', function ($scope) {
 
     $scope.title = 'Art';
 

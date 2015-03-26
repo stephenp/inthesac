@@ -1,18 +1,19 @@
 <h1>{{title}}</h1>
 
-<form name="voteForm">
+<form name="voteForm"
+  ng-submit="sendForm">
   <input type="hidden" name="utf8" value="✓">
 
   <div class="form-group">
-    <input type="search" name="search" class="form-control"
+    <input type="search" name="search" class="form-control" placeholder="Search..."
       ng-model="query">
   </div>
 
   <div class="radio"
     ng-repeat="option in options | filter: query">
     <label>
-      <input type="radio" name="options" value="{{option.value}}">
-      {{option.label}}
+      <input type="radio" name="options" value="{{option}}">
+      {{option}}
     </label>
   </div>
 

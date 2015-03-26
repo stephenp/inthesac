@@ -20,6 +20,10 @@ angular
         controller: 'MainCtrl',
         templateUrl: 'views/main.html'
       })
+      .when('/neighborhood', {
+        controller: 'NeighborhoodCtrl',
+        templateUrl: 'views/form.html'
+      })
       .when('/farm', {
         controller: 'FarmCtrl',
         templateUrl: 'views/form.html'

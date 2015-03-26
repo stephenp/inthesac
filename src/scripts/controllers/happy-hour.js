@@ -10,9 +10,9 @@
 angular.module('inthesacApp')
   .controller('FarmCtrl', function ($scope) {
 
-    $scope.title = 'Farm To Fork';
+    $scope.title = 'Happy Hour';
 
-    $scope.action = 'https://formkeep.com/f/e737368d40bd';
+    $scope.action = 'https://formkeep.com/f/7088711f4e09';
 
     $scope.options = [
       {

@@ -36,6 +36,10 @@ angular
         controller: 'ArtCtrl',
         templateUrl: 'views/form.html'
       })
+      .when('/info', {
+        controller: 'InfoCtrl',
+        templateUrl: 'views/info.html'
+      })
       .otherwise({
         redirectTo: '/'
       });

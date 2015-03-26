@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('inthesacApp')
-  .controller('FarmCtrl', function ($scope) {
+  .controller('NeighborhoodCtrl', function ($scope) {
 
-    $scope.title = 'Farm To Fork';
+    $scope.title = 'Neighborhood';
 
     $scope.action = 'https://formkeep.com/f/e737368d40bd';
 

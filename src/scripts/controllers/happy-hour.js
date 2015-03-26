@@ -8,7 +8,7 @@
  * Controller of the inthesacApp
  */
 angular.module('inthesacApp')
-  .controller('FarmCtrl', function ($scope) {
+  .controller('HappyCtrl', function ($scope) {
 
     $scope.title = 'Happy Hour';
 

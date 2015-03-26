@@ -9,6 +9,11 @@
  */
 angular.module('inthesacApp')
   .controller('FarmCtrl', function ($scope) {
+
+    $scope.title = 'Farm To Fork';
+
+    $scope.action = 'http://localhost:9000/#/art';
+
     $scope.options = [
       {
         name: 'balls',

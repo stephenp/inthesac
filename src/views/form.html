@@ -1,13 +1,27 @@
 <h1>{{title}}</h1>
 
-<form action="{{action}}">
+<form name="voteForm">
   <input type="hidden" name="utf8" value="✓">
 
-  <div class="form-group"
-    ng-repeat="option in options">
+  <div class="form-group">
+    <input type="search" name="search" class="form-control"
+      ng-model="query">
+  </div>
 
-    <label>{{option.label}}</label>
-    <input name="{{option.name}}" class="form-control">
+  <div class="radio"
+    ng-repeat="option in options | filter: query">
+    <label>
+      <input type="radio" name="options" value="{{option.value}}">
+      {{option.label}}
+    </label>
+  </div>
+
+  <div class="radio"
+    ng-show="query">
+    <label>
+      <input type="radio" name="options" value="{{query}}">
+      Create "{{query}}"
+    </label>
   </div>
 
   <button type="submit" class="btn btn-primary">

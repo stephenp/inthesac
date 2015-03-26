@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+
+<form action="{{action}}">
+  <div class="form-group"
+    ng-repeat="option in options">
+
+    <label>{{option.label}}</label>
+    <input name="{{option.name}}" class="form-control">
+  </div>
+
+  <button type="submit"
+    ng-show="hasOption">
+    Confirm
+  </button>
+</form>

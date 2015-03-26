@@ -27,9 +27,13 @@ body {
 }
 
 #tagline {
+  position: absolute;
   display: block;
-  width: 75%;
-  margin: 1em auto;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto 1em;
 }
 
 .survey-next {
@@ -37,18 +41,10 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1em;
-  font-size: 2em;
-  letter-spacing: 0.1em;
-  border: 0;
-  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 1.3em;
   -webkit-transition: background 150ms;
           transition: background 150ms;
-}
-
-.survey-next:hover {
-  background: rgba(255, 255, 255, 0.25);
 }
 
 

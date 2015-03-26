@@ -18,7 +18,6 @@ gulp.task('build', [
 
 gulp.task('build-styles', function() {
   return gulp.src([
-      './bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss',
       './src/styles/main.scss'
     ])
     .pipe(concat('main.scss'))

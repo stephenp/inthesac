@@ -1,48 +1,27 @@
 'use strict';
 
 angular.module('inthesacApp')
-  .controller('NeighborhoodCtrl', function ($scope, $http, $timeout, $location) {
+  .controller('NeighborhoodCtrl', function ($scope, FormService) {
 
     var init = function() {
-          resetValues();
-          bindActions();
-        },
-
-        resetValues = function() {
           $scope.title = 'What is your favorite neighborhood';
+          $scope.click = click;
 
-          $scope.options = [
+          FormService.init($scope);
+          FormService.options([
             'Old Sac',
             'Downtown Sac',
             'Midtown Sac',
             'R-street Corridor'
-          ];
-          $scope.selected = null;
-
-          $scope.sending = false;
-        },
-
-        bindActions = function() {
-          $scope.click = click;
+          ]);
         },
 
         click = function() {
-          $scope.sending = true;
-
-          $timeout(function() {
-            $location.path('/happy');
-          }, 2000);
-
-
-          // $http.post('https://formkeep.com/f/7d97bd0b7130',
-          //   { neighborhood: $scope.selected }
-          //   )
-          //   .success(function(data, status, headers, config) {
-          //     console.log(arguments);
-          //   })
-          //   .error(function(data, status, headers, config) {
-          //     console.log(arguments);
-          //   });
+          FormService.send({
+            url: 'https://formkeep.com/f/7d97bd0b7130',
+            data: { neighborhood: $scope.selected },
+            next: '/happy'
+          });
         };
 
     init();

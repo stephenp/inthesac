@@ -1,34 +1,46 @@
 'use strict';
 
 angular.module('inthesacApp')
-  .controller('HappyCtrl', function ($scope) {
+  .controller('HappyCtrl', function ($scope, FormService) {
 
-    $scope.title = 'Happy Hour';
+    var init = function() {
+          $scope.title = 'Happy Hour';
+          $scope.click = click;
 
-    $scope.action = 'https://formkeep.com/f/7088711f4e09';
+          FormService.init($scope);
+          FormService.options([
+            '58 degrees and Holding Co',
+            'Capital Dime',
+            'De Vere’s Irish Pub',
+            'Der BierGarten Sacramento',
+            'Dive Bar',
+            'Ella Dining Room & Bar',
+            'Federalist Public House & Beer Garden',
+            'Golden Bear',
+            'Grange Restaurant',
+            'Hock Farm Craft & Provision',
+            'Hook & Ladder Manufacturing Co.',
+            'House Kitchen & Bar',
+            'K Bar',
+            'LowBrau Bierhall',
+            'Mayahuel – Tequila Museo and Restaurant',
+            'Mix Downtown',
+            'Pizza Rock',
+            'Pour House',
+            'Shady Lady Saloon',
+            'Streets – formerly Streets of London',
+            'The Red Rabbit'
+          ]);
+        },
 
-    $scope.options = [
-      '58 degrees and Holding Co',
-      'Capital Dime',
-      'De Vere’s Irish Pub',
-      'Der BierGarten Sacramento',
-      'Dive Bar',
-      'Ella Dining Room & Bar',
-      'Federalist Public House & Beer Garden',
-      'Golden Bear',
-      'Grange Restaurant',
-      'Hock Farm Craft & Provision',
-      'Hook & Ladder Manufacturing Co.',
-      'House Kitchen & Bar',
-      'K Bar',
-      'LowBrau Bierhall',
-      'Mayahuel – Tequila Museo and Restaurant',
-      'Mix Downtown',
-      'Pizza Rock',
-      'Pour House',
-      'Shady Lady Saloon',
-      'Streets – formerly Streets of London',
-      'The Red Rabbit'
-    ];
+        click = function() {
+          FormService.send({
+            url: 'https://formkeep.com/f/7088711f4e09',
+            data: { happyhour: $scope.selected },
+            next: '/art'
+          });
+        };
+
+    init();
 
   });

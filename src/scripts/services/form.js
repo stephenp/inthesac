@@ -18,8 +18,6 @@ angular.module('inthesacApp')
       send: function(options) {
         this.$scope.sending = true;
 
-        console.log('Sent', this.$scope.selected);
-
         $timeout(function() {
           $location.path(options.next);
         }, 1 * 1000);

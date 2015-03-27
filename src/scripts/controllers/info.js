@@ -4,7 +4,7 @@ angular.module('inthesacApp')
   .controller('InfoCtrl', function ($scope, $http, $location) {
 
     var init = function() {
-          $scope.title = 'Who are you?';
+          $scope.title = 'Tell us about yourself!';
           $scope.click = click;
           $scope.state = 'age';
         },

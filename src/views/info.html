@@ -1,4 +1,4 @@
-<h1>Who are you?</h1>
+<h1>Tell us about yourself!</h1>
 
 <ng-form id="infoForm" name="infoForm"
   ng-submit="sendForm">
@@ -71,7 +71,7 @@
   </ng-form>
 
   <ng-form ng-show="state == 'email'">
-    <div class="form-group">
+    <div class="form-group email-input">
       <input type="email" name="email" class="form-control" placeholder="Email"
         ng-model="email">
     </div>

@@ -35,7 +35,7 @@ angular.module('inthesacApp')
         click = function() {
           FormService.send({
             url: 'https://formkeep.com/f/129baa1862a3',
-            data: { art: $scope.selected },
+            data: { farmtofork: $scope.selected },
             next: '/info'
           });
         };

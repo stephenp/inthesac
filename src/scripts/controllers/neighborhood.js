@@ -10,7 +10,6 @@ angular.module('inthesacApp')
 
         resetValues = function() {
           $scope.title = 'Neighborhood';
-          $scope.confirm = 'Confirm';
 
           $scope.options = [
             'Old Sac',
@@ -18,9 +17,9 @@ angular.module('inthesacApp')
             'Midtown Sac',
             'R-street Corridor'
           ];
-
           $scope.selected = null;
-          $scope.disabled = false;
+
+          $scope.sending = false;
         },
 
         bindActions = function() {
@@ -28,8 +27,7 @@ angular.module('inthesacApp')
         },
 
         click = function() {
-          $scope.disabled = true;
-          $scope.confirm = 'Saving...';
+          $scope.sending = true;
 
           $timeout(function() {
             $location.path('/happy');

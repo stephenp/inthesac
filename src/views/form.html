@@ -34,11 +34,19 @@
     </label>
   </div>
 
+  {{selected}}
+
   <div class="survey-actions">
     <a class="btn btn-primary survey-confirm"
       ng-click="click()"
-      ng-disabled="disabled">
+      ng-show="!sending"
+      ng-disabled="!selected">
       Confirm
+    </a>
+
+    <a class="btn btn-primary survey-confirm"
+      ng-show="sending">
+      Sending...
     </a>
   </div>
 </form>

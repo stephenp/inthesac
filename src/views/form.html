@@ -39,14 +39,8 @@
     ng-show="!!selected">
 
     <a class="btn btn-primary survey-confirm"
-      ng-show="sending">
-      Sending...
-    </a>
-
-    <a class="btn btn-primary survey-confirm"
-      ng-click="click()"
-      ng-show="!sending">
-      Confirm
+      ng-click="click()">
+      {{confirm}}
     </a>
   </div>
 </form>

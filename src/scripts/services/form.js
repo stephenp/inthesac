@@ -8,6 +8,7 @@ angular.module('inthesacApp')
         this.$scope = $scope;
 
         this.$scope.sending = false;
+        this.$scope.confirm = 'Confirm'
       },
 
       options: function(options) {
@@ -16,14 +17,13 @@ angular.module('inthesacApp')
       },
 
       send: function(options) {
-        this.$scope.sending = true;
-
-        // $timeout(function() {
-        //   $location.path(options.next);
-        // }, 1 * 1000);
+        this.$scope.confirm = 'Sending...';
 
         $http.post(options.url, options.data)
           .success(function() {
+            $location.path(options.next)
+          })
+          .error(function() {
             $location.path(options.next)
           });
 

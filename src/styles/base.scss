@@ -44,27 +44,83 @@ h1 {
 }
 
 /* Da Form */
-#voteForm input {
-  background: $mis-white;
-  border: 0;
-  border-radius: 100px;
+#search {
+  margin: 0;
+  padding: 1em 1.25em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 0; border-right: 0;
 }
 
-#voteForm input::-webkit-input-placeholder {
-   color: $mis-white-hover;
+#voteForm {
+  text-align: center;
+
+  .radio { margin: 0; }
+
+  input {
+    background: $mis-white;
+    border: 0;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: background 150ms;
+            transition: background 150ms;
+
+    &::-webkit-input-placeholder {
+      color: $mis-white-hover;
+      -webkit-transition: color 150ms;
+              transition: color 150ms;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $mis-white-hover;
+      -webkit-transition: color 150ms;
+              transition: color 150ms;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: $mis-white-hover;
+      -webkit-transition: color 150ms;
+              transition: color 150ms;
+    }
+
+    &:-ms-input-placeholder {
+      color: $mis-white-hover;
+      -webkit-transition: color 150ms;
+              transition: color 150ms;
+    }
+
+    &:focus {
+      background: $mis-white-hover;
+      outline: 0;
+      outline-style:none;
+      box-shadow:none;
+      border-color:transparent;
+
+      &::-webkit-input-placeholder { color: $white; }
+      &:-moz-placeholder { /* Firefox 18- */ color: $white; }
+      &::-moz-placeholder {  /* Firefox 19+ */ color: $white; }
+      &:-ms-input-placeholder { color: $white; }
+    }
+
+    &[type="radio"] {
+      display: none;
+    }
+  } /* /input */
+
+  label {
+    display: block;
+    padding: 1.5em 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $mis-text;
+    border-bottom: 1px solid $mis-white;
+
+      &:hover {
+        color: $mis-text-hover;
+      }
+  }
+
 }
 
-#voteForm input:-moz-placeholder { /* Firefox 18- */
-   color: $mis-white-hover;
-}
-
-#voteForm input::-moz-placeholder {  /* Firefox 19+ */
-   color: $mis-white-hover;
-}
-
-#voteForm input:-ms-input-placeholder {
-   color: $mis-white-hover;
-}
 
 
 /* Global Styles */

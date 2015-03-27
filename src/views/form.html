@@ -10,9 +10,11 @@
   </div>
 
   <div class="radio"
-    ng-repeat="option in options | filter: query">
+    ng-repeat="option in options | filter: query"
+    ng-class="{'radio-selected':option == $parent.selected}">
     <label>
-      <input type="radio" name="options" value="{{option}}">
+      <input type="radio" name="options" value="{{option}}"
+        ng-model="$parent.selected">
       {{option}}
     </label>
   </div>
@@ -20,7 +22,8 @@
   <div class="radio"
     ng-show="query">
     <label>
-      <input type="radio" name="options" value="{{query}}">
+      <input type="radio" name="options" value="{{query}}"
+        ng-model="selected">
       Create "{{query}}"
     </label>
   </div>
@@ -32,7 +35,9 @@
   </div>
 
   <div class="survey-actions">
-    <button type="submit" class="btn btn-primary survey-confirm">
+    <button type="submit" class="btn btn-primary survey-confirm"
+      ng-click="click()"
+      ng-disabled="disabled()">
       Confirm
     </button>
   </div>

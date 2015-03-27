@@ -40,7 +40,7 @@ angular.module('inthesacApp')
         },
 
         disabled = function() {
-          return true;
+          return !$scope.selected;
         };
 
     init();

@@ -1,16 +1,14 @@
 'use strict';
 
 angular.module('inthesacApp')
-  .controller('NeighborhoodCtrl', function ($scope) {
+  .controller('NeighborhoodCtrl', function ($scope, $http) {
 
-    var url = 'https://formkeep.com/f/7d97bd0b7130',
-
-        init = function() {
-          initValues();
+    var init = function() {
+          resetValues();
           bindActions();
         },
 
-        initValues = function() {
+        resetValues = function() {
           $scope.title = 'Neighborhood';
           $scope.confirm = 'Confirm';
 
@@ -25,13 +23,24 @@ angular.module('inthesacApp')
         },
 
         bindActions = function() {
-          $scope.click = function() {
-            console.log($scope.selected);
-          };
+          $scope.click = click;
+          $scope.disabled = disabled;
+        },
 
-          $scope.disabled = function() {
-            return true;
-          };
+        click = function() {
+          console.log('hi');
+
+          $http.post('https://formkeep.com/f/7d97bd0b7130')
+            .success(function(data, status, headers, config) {
+              console.log(arguments);
+            })
+            .error(function(data, status, headers, config) {
+              console.log(arguments);
+            });
+        },
+
+        disabled = function() {
+          return !$scope.selected;
         };
 
     init();

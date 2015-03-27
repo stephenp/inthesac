@@ -3,7 +3,7 @@
 angular.module('inthesacApp')
   .controller('FarmCtrl', function ($scope) {
 
-    $scope.title = 'Farm To Fork';
+    $scope.title = 'Which is the best Farm-To-Fork spot';
 
     $scope.action = 'https://formkeep.com/f/e737368d40bd';
 

@@ -3,7 +3,7 @@
 angular.module('inthesacApp')
   .controller('ArtCtrl', function ($scope) {
 
-    $scope.title = 'Art';
+    $scope.title = 'Which is your favorite Art Gallery';
 
     $scope.action = 'https://formkeep.com/f/66fc8d855494';
 

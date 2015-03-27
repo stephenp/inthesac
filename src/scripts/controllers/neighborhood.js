@@ -9,7 +9,7 @@ angular.module('inthesacApp')
         },
 
         resetValues = function() {
-          $scope.title = 'Neighborhood';
+          $scope.title = 'What is your favorite neighborhood';
 
           $scope.options = [
             'Old Sac',

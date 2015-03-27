@@ -3,7 +3,7 @@
 angular.module('inthesacApp')
   .controller('HappyCtrl', function ($scope) {
 
-    $scope.title = 'Happy Hour';
+    $scope.title = 'Who has the best happy hour';
 
     $scope.action = 'https://formkeep.com/f/7088711f4e09';
 

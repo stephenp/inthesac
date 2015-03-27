@@ -20,7 +20,8 @@
   </div>
 
   <div class="radio"
-    ng-show="query">
+    ng-show="query"
+    ng-class="{'radio-selected':query == selected}">
     <label>
       <input type="radio" name="options" value="{{query}}"
         ng-model="selected">
@@ -33,6 +34,8 @@
       <span class="glyphicon glyphicon-heart"></span>
     </label>
   </div>
+
+  {{selected}}
 
   <div class="survey-actions">
     <a class="btn btn-primary survey-confirm"

@@ -32,6 +32,10 @@ angular
         controller: 'InfoCtrl',
         templateUrl: 'views/info.html'
       })
+      .when('/thanks', {
+        controller: 'ThanksCtrl',
+        templateUrl: 'views/thanks.html'
+      })
       .otherwise({
         redirectTo: '/'
       });

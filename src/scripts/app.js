@@ -4,7 +4,8 @@ angular
   .module('inthesacApp', [
     'ngAnimate',
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'ngTouch'
   ])
   .config(function($routeProvider) {
     $routeProvider

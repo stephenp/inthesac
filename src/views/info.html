@@ -5,7 +5,8 @@
   <input type="hidden" name="utf8" value="✓">
 
   <ng-form ng-show="state == 'age'">
-    <div class="radio">
+    <div class="radio"
+      ng-class="{'radio-selected': age == '13-17'}">
       <label>
         <input type="radio" name="age" value="13-17"
           ng-model="age">
@@ -13,7 +14,8 @@
       </label>
     </div>
 
-    <div class="radio">
+    <div class="radio"
+      ng-class="{'radio-selected': age == '18-24'}">
       <label>
         <input type="radio" name="age" value="18-24"
           ng-model="age">
@@ -21,7 +23,8 @@
       </label>
     </div>
 
-    <div class="radio">
+    <div class="radio"
+      ng-class="{'radio-selected': age == '25-32'}">
       <label>
         <input type="radio" name="age" value="25-32"
           ng-model="age">
@@ -29,7 +32,8 @@
       </label>
     </div>
 
-    <div class="radio">
+    <div class="radio"
+      ng-class="{'radio-selected': age == '33-45'}">
       <label>
         <input type="radio" name="age" value="33-45"
           ng-model="age">
@@ -46,7 +50,8 @@
   </ng-form>
 
   <ng-form ng-show="state == 'gender'">
-    <div class="radio">
+    <div class="radio"
+      ng-class="{'radio-selected': gender == 'Male'}">
       <label>
         <input type="radio" name="gender" value="Male"
           ng-model="gender">
@@ -54,7 +59,8 @@
       </label>
     </div>
 
-    <div class="radio">
+    <div class="radio"
+      ng-class="{'radio-selected': gender == 'Female'}">
       <label>
         <input type="radio" name="gender" value="Female"
           ng-model="gender">

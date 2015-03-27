@@ -1,57 +1,63 @@
 <h1>Who are you?</h1>
 
-<form name="infoForm"
+<ng-form name="infoForm"
   ng-submit="sendForm">
   <input type="hidden" name="utf8" value="✓">
 
-  <div class="form-group">
-    <input type="text" name="email" class="form-control" placeholder="Email"
-      ng-model="user.email">
-  </div>
+  <ng-form ng-show="state == 'age'">
+    <div class="radio">
+      <label>
+        <input type="radio" name="age" value="Male">
+        13-17
+      </label>
+    </div>
 
-  <div class="radio">
-    <label>
-      <input type="radio" name="gender" value="Male">
-      Male
-    </label>
-  </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="age" value="Male">
+        18-24
+      </label>
+    </div>
 
-  <div class="radio">
-    <label>
-      <input type="radio" name="gender" value="Male">
-      Female
-    </label>
-  </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="age" value="Male">
+        25-32
+      </label>
+    </div>
 
-  <div class="radio">
-    <label>
-      <input type="radio" name="age" value="Male">
-      13-17
-    </label>
-  </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="age" value="Male">
+        33-45
+      </label>
+    </div>
+  </ng-form>
 
-  <div class="radio">
-    <label>
-      <input type="radio" name="age" value="Male">
-      18-24
-    </label>
-  </div>
+  <ng-form ng-show="state == 'gender'">
+    <div class="radio">
+      <label>
+        <input type="radio" name="gender" value="Male">
+        Male
+      </label>
+    </div>
 
-  <div class="radio">
-    <label>
-      <input type="radio" name="age" value="Male">
-      25-32
-    </label>
-  </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="gender" value="Male">
+        Female
+      </label>
+    </div>
+  </ng-form>
 
-  <div class="radio">
-    <label>
-      <input type="radio" name="age" value="Male">
-      33-45
-    </label>
-  </div>
+  <ng-form ng-show="state == 'email'">
+    <div class="form-group">
+      <input type="text" name="email" class="form-control" placeholder="Email"
+        ng-model="user.email">
+    </div>
+  </ng-form>
 
   <button type="submit" class="btn btn-primary survey-next">
     Confirm
   </button>
-</form>
+</ng-form>

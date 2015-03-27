@@ -6,6 +6,7 @@ angular.module('inthesacApp')
     var init = function() {
           $scope.title = 'Information';
           $scope.click = click;
+          $scope.state = 'age'
         },
 
         click = function() {

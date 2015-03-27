@@ -4,7 +4,7 @@ angular.module('inthesacApp')
   .controller('ArtCtrl', function ($scope, FormService) {
 
     var init = function() {
-          $scope.title = 'Art';
+          $scope.title = 'Which is your favorite Art Gallery';
           $scope.click = click;
 
           FormService.init($scope);

@@ -4,8 +4,17 @@
   border: 0;
   text-transform: uppercase;
   border-radius: 0;
+
+  &:hover {
+    background: $mis-white-hover;
+  }
+
+  &:disabled {
+    background: $mis-white-disabled;
+  }
+
 }
 
-.btn:hover {
-  background: $mis-white-hover;
+.btn-primary[disabled], .btn-primary[disabled]:hover {
+    background: $mis-white-disabled;
 }

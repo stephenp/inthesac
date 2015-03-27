@@ -4,7 +4,7 @@ angular.module('inthesacApp')
   .controller('NeighborhoodCtrl', function ($scope, FormService) {
 
     var init = function() {
-          $scope.title = 'Neighborhood';
+          $scope.title = 'What is your favorite neighborhood';
           $scope.click = click;
 
           FormService.init($scope);

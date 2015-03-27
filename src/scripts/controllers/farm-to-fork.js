@@ -4,7 +4,7 @@ angular.module('inthesacApp')
   .controller('FarmCtrl', function ($scope, FormService) {
 
     var init = function() {
-          $scope.title = 'Farm To Fork';
+          $scope.title = 'Which is the best Farm-To-Fork spot';
           $scope.click = click;
 
           FormService.init($scope);

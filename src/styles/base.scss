@@ -22,8 +22,8 @@ h1 {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
-  height: 15%;
-  background: transparent url("/images/global/bg-default.jpg") center top fixed no-repeat;
+  height: 100px;
+  background: transparent url("/images/global/bg-default.jpg") center top no-repeat;
   background-size: cover;
   text-align: center;
   z-index: 10;
@@ -40,7 +40,7 @@ h1 {
 
 .content {
   position: relative;
-  top: 15%;
+  top: 100px;
   height: 85%;
 }
 
@@ -50,8 +50,7 @@ h1 {
   position: relative;
   width: 260px;
   margin: 0 auto 1em;
-  top: 50%;
-  transform: translateY(-110%);
+  top: 20%;
 }
 
 /* Da Form */
@@ -158,7 +157,7 @@ h1 {
   width: 100%;
   font-size: 1.5em;
   padding: 1.25em;
-  background: transparent url("/images/global/bg-default.jpg") center top fixed no-repeat;
+  background: transparent url("/images/global/bg-default.jpg") center bottom no-repeat;
   background-size: cover;
 
   .survey-confirm, .survey-next {

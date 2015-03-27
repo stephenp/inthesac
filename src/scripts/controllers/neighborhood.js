@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('inthesacApp')
-  .controller('NeighborhoodCtrl', function ($scope, $http) {
+  .controller('NeighborhoodCtrl', function ($scope, $http, $timeout, $location) {
 
     var init = function() {
           resetValues();
@@ -10,7 +10,6 @@ angular.module('inthesacApp')
 
         resetValues = function() {
           $scope.title = 'Neighborhood';
-          $scope.confirm = 'Confirm';
 
           $scope.options = [
             'Old Sac',
@@ -18,29 +17,32 @@ angular.module('inthesacApp')
             'Midtown Sac',
             'R-street Corridor'
           ];
-
           $scope.selected = null;
+
+          $scope.sending = false;
         },
 
         bindActions = function() {
           $scope.click = click;
-          $scope.disabled = disabled;
         },
 
         click = function() {
-          console.log('hi');
+          $scope.sending = true;
 
-          $http.post('https://formkeep.com/f/7d97bd0b7130')
-            .success(function(data, status, headers, config) {
-              console.log(arguments);
-            })
-            .error(function(data, status, headers, config) {
-              console.log(arguments);
-            });
-        },
+          $timeout(function() {
+            $location.path('/happy');
+          }, 2000);
 
-        disabled = function() {
-          return !$scope.selected;
+
+          // $http.post('https://formkeep.com/f/7d97bd0b7130',
+          //   { neighborhood: $scope.selected }
+          //   )
+          //   .success(function(data, status, headers, config) {
+          //     console.log(arguments);
+          //   })
+          //   .error(function(data, status, headers, config) {
+          //     console.log(arguments);
+          //   });
         };
 
     init();

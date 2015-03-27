@@ -1,20 +1,12 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name inthesacApp
- * @description
- * # inthesacApp
- *
- * Main module of the application.
- */
 angular
   .module('inthesacApp', [
     'ngAnimate',
     'ngResource',
     'ngRoute'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         controller: 'MainCtrl',
@@ -43,4 +35,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .config(function($httpProvider) {
+    $httpProvider.defaults.headers.common.Accept = 'application/javascript';
   });

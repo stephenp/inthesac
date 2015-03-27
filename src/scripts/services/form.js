@@ -18,14 +18,14 @@ angular.module('inthesacApp')
       send: function(options) {
         this.$scope.sending = true;
 
-        $timeout(function() {
-          $location.path(options.next);
-        }, 1 * 1000);
+        // $timeout(function() {
+        //   $location.path(options.next);
+        // }, 1 * 1000);
 
-        // $http.post(options.url, options.data)
-        //   .success(function() {
-        //     $location.path(options.next)
-        //   });
+        $http.post(options.url, options.data)
+          .success(function() {
+            $location.path(options.next)
+          });
 
       }
     }

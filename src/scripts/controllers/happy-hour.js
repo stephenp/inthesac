@@ -4,7 +4,7 @@ angular.module('inthesacApp')
   .controller('HappyCtrl', function ($scope, FormService) {
 
     var init = function() {
-          $scope.title = 'Who has the best happy hour';
+          $scope.title = 'Who has the best happy hour?';
           $scope.click = click;
 
           FormService.init($scope);

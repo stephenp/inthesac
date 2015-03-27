@@ -40,7 +40,7 @@ h1 {
 .content {
   position: relative;
   top: 0;
-  height: calc(100% - 155px);
+  height: calc(100% - 100px);
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -62,8 +62,12 @@ h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#voteForm {
+#voteForm, #infoForm {
   text-align: center;
+
+  &.ng-dirty {
+    padding-bottom: 4em;
+  }
 
   .radio { margin: 0; }
 
@@ -163,6 +167,8 @@ h1 {
   height: 55px;
   font-size: 1.5em;
   padding: 1.25em;
+  background: #000 url("/images/global/bg-default.jpg") center top fixed no-repeat;
+  background-size: cover;
 
   .survey-confirm, .survey-next {
     position: absolute;

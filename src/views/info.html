@@ -1,6 +1,6 @@
 <h1>Who are you?</h1>
 
-<ng-form name="infoForm"
+<ng-form id="infoForm" name="infoForm"
   ng-submit="sendForm">
   <input type="hidden" name="utf8" value="✓">
 
@@ -37,11 +37,12 @@
       </label>
     </div>
 
-    <a class="btn btn-primary"
-      ng-click="state = 'gender'"
-      ng-show="age">
-      Next
-    </a>
+    <div class="survey-actions" ng-show="age">
+      <a class="btn btn-primary survey-next"
+        ng-click="state = 'gender'">
+        Next
+      </a>
+    </div>
   </ng-form>
 
   <ng-form ng-show="state == 'gender'">
@@ -61,11 +62,12 @@
       </label>
     </div>
 
-    <a class="btn btn-primary"
-      ng-click="state = 'email'"
-      ng-show="gender">
-      Next
-    </a>
+    <div class="survey-actions" ng-show="gender">
+      <a class="btn btn-primary survey-next"
+        ng-click="state = 'email'">
+        Next
+      </a>
+    </div>
   </ng-form>
 
   <ng-form ng-show="state == 'email'">
@@ -74,10 +76,11 @@
         ng-model="email">
     </div>
 
-    <a class="btn btn-primary"
-      ng-click="click()"
-      ng-show="email">
-      Finish
-    </a>
+    <div class="survey-actions" ng-show="email">
+      <a class="btn btn-primary survey-confirm"
+        ng-click="click()">
+        Finish
+      </a>
+    </div>
   </ng-form>
 </ng-form>

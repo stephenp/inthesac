@@ -43,4 +43,7 @@ angular
   })
   .config(function($httpProvider) {
     $httpProvider.defaults.headers.common.Accept = 'application/javascript';
+  })
+  .run(function($rootScope) {
+
   });
